@@ -36,3 +36,7 @@ const yuvi = `I'm ${firstName}, a ${year-birthYear} years old ${job}!
 thank you`;
 console.log(yuvi);
 
+let msg = `Hello \
+World`;
+console.log(`${msg}`);
+

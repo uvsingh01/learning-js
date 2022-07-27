@@ -2,6 +2,8 @@
 // 🔴 this is tha manual feature to convert some varibles datatypes
 // to make it useful with other variables
 
+// 🔴this is known as implicit coersion
+
 const inputYear = "2001";
 console.log(Number(inputYear), inputYear);
 console.log(Number(inputYear)+18);
@@ -12,6 +14,8 @@ console.log(typeof NaN); // this is will give number as the type of NaN
 //type coersion
 // 🔴 the feature of  JS which automatically changes the 
 // datatype of given variable 
+
+// 🔴 this is known as explicit coersion
 
 const aString = "uvsingh";
 console.log(aString+43);//  thsi will give a string

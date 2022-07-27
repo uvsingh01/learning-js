@@ -38,3 +38,6 @@ console.log(typeof hen);
 hen ="yeah";
 console.log(hen);
 console.log(typeof hen);
+
+const a = 1/0;
+console.log(a);
