@@ -5,9 +5,10 @@
 // 🔴this is known as implicit coersion
 
 const inputYear = "2001";
+const h = false;
 console.log(Number(inputYear), inputYear);
 console.log(Number(inputYear)+18);
-
+console.log(Number(h));// this will give 0 in case of false and 1 in case of true
 console.log(Number("Yuvraj")); // this will give NaN (Not a Number)
 console.log(typeof NaN); // this is will give number as the type of NaN 
 
