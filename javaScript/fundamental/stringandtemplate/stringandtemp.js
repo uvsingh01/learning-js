@@ -19,7 +19,7 @@ console.log(uv);
 
 
 
-// template string
+// template literal
 
 // 🔴 this template feature was introduced in ES6 to ease
 // the process of creating string with variables
@@ -31,6 +31,10 @@ console.log(uv);
 
 // 🔴in this feature its easy to create multiple line by 
 // simply pressing the enter/return key
+
+// 🔴in this feature in string we can only add 
+// expression like (3-2) && not statements like (if-else)
+// but we can use ternary operator instead of statement
 
 const yuvi = `I'm ${firstName}, a ${year-birthYear} years old ${job}!
 thank you`;

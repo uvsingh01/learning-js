@@ -53,3 +53,13 @@ if(!drunk && !driving){
 else{
     console.log("you can drive");
 }
+
+
+// ternary operator
+
+// 🔺 this the operator used when we have to take quick decision
+
+// 🔺this is the great replacement for small if-else statements
+const age = 21;
+const x = age>=18 ? "alcohol" : "water";
+console.log(`can drink ${x}`);
