@@ -17,6 +17,12 @@ else{
     console.log("not equal");
 }
 
+// strict operator
+// 🔺this will check both the value and datatypes of a given variable then make decision
+
+// loose operator
+// 🔺this will check only the value of variable irrespective of there datatype
+
 
 // logical operator
 
@@ -24,7 +30,7 @@ const drunk = true;
 const driving = false;
 // And operator (&&) 
 // 🔺 this operator is used for checking the condition of multiple 
-// booean if all of them are true then it will return true.
+// boolean if all are true then it will return true.
 
 if(drunk&&driving){
     console.log("do not drive");

@@ -14,6 +14,7 @@ console.log(b);
 
 //const
 // its used when we do not need to reassign a value
+// only the primitive datatype cannot be changed
 
 const c =50;
 c=10; //🔺this will give an error
