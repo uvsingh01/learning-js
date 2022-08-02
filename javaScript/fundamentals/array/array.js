@@ -46,5 +46,4 @@ const ages = [age1,age2, age3];
 console.log(ages);
 
 
-// basic array methods
 
