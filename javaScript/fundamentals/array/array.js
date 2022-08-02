@@ -37,6 +37,8 @@ const calcAge = function(year){
 
 const yr = [1990, 1967,2020];
 
+
+// accessing the element in array
 const age1 = calcAge(yr[0]);
 const age2 = calcAge(yr[1]);
 const age3 = calcAge(yr[yr.length-1]);
@@ -46,4 +48,12 @@ const ages = [age1,age2, age3];
 console.log(ages);
 
 
+// important revisit output
+const noth = nothing();
+function nothing(){
+    console.log("nice");
+    return "fine";
+}
+const yuvi = [noth];
+console.log(yuvi);
 
