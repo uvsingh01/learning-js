@@ -80,3 +80,5 @@ const uv = { // object literal syntax
 console.log(uv.calcAge());
 console.log(uv.age);
 console.log(uv.getSummary());
+
+
