@@ -22,7 +22,7 @@ const aString = "uvsingh";
 console.log(aString+43);//  thsi will give a string
 console.log("43"+4); //this will give a string 
 console.log("43"-4); //this will give a number
-
+console.log("yuv"-4);// this will give NaN
 let n ="1"+1; //this will concatenate a string 
 n=n-1; // this will convert n to a number and then subtract it with 1
 console.log(n); //this will give an number

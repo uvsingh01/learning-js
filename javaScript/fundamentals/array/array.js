@@ -28,6 +28,7 @@ console.log(friends);
 
 const firstName= "Yuvi";
 const arr = [firstName, "no", 34, true, friends];
+arr[5] = "dddd"; //this way we can add a element too
 console.log(arr);
 console.log(arr.length);
 
@@ -45,7 +46,7 @@ const age3 = calcAge(yr[yr.length-1]);
 console.log(age1, age2, age3);
 
 const ages = [age1,age2, age3];
-console.log(ages);
+console.log(typeof ages);
 
 
 // important revisit output
@@ -57,3 +58,21 @@ function nothing(){
 const yuvi = [noth];
 console.log(yuvi);
 
+//iteration in array
+
+for(let i=0; i<3; i++){
+    console.log(yr[i]);
+}
+
+// break & continue
+
+for(let i=0; i<3 ; i++){
+    if(typeof yr[i] !== "number") continue; // this continue will check if this condition is true then it will skip the next line and iterate the loop
+    console.log(typeof yr[i]);
+}
+ 
+for(let i=0; i<3; i++){
+    if(typeof yr[i] !== "number"){ //if this condition becomes true then it will come out of the loop
+        break;
+    }
+}
