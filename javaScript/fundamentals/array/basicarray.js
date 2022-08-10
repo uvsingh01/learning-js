@@ -29,3 +29,4 @@ console.log(friends.indexOf("popss"));//this will also print -1 because its not 
 
 console.log(friends.includes("Raj"));// this will give true because its present in array
 console.log(friends.includes("Puru")); // this will give false because its not present in array
+
