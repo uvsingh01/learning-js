@@ -51,6 +51,16 @@
 // A scope will never,ever have access to the variable of an inner scope
 
 
+a=10;
+var a=40;
+a=50;
+console.log(a);
+// var a=1;
+// (function(){
+//     console.log(a);
+//     a=2;
+//     console.log(a);
+// })();
 
 
 
@@ -66,17 +76,14 @@
 
 
 
-
-function a(){
-    function b(){
-        let abc =10;
-        console.log(abc);
-    }
-    b();
-}
-a();
-
-
+// function a(){
+//     function b(){
+//         let abc =10;
+//         console.log(abc);
+//     }
+//     b();
+// }
+// a();
 
 // function makeFunc() {
 //     const name = 'Mozilla';

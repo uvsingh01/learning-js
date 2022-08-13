@@ -26,7 +26,7 @@ console.log(typeof example);//it way print "object" and this thing is a bug in t
 // symbol
 // bigInt
 
-// we us let to assign a variable 
+// we use let to assign a variable 
 // and in case of reassign we use variable name = whatever
 // we can reassign a variable with any form of datatypes
 // eg.

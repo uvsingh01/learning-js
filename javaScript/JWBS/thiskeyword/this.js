@@ -32,7 +32,7 @@ const calcAgeArrow = birthYear =>{
     console.log(2037-birthYear);
     console.log(this);// this will point towards window object
 }
-calcAgeArrow(2001)
+calcAgeArrow(2001);
 
 //🔺 when we call event listener this will point towards the element which dom attached to.
 

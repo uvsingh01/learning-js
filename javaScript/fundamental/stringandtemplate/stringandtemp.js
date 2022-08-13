@@ -24,7 +24,7 @@ console.log(uv);
 // 🔴 this template feature was introduced in ES6 to ease
 // the process of creating string with variables
 
-// 🔴 we cane use backtick(``) to use this feature
+// 🔴 we can use backtick(``) to use this feature
 
 // 🔴 to insert any variable or javascript code we have to
 // use curly braces with dollar sign like this ${varName};
