@@ -45,3 +45,9 @@ console.log(g,h);
 const uv=[1,2, ["yuv", "raju"]];
 const [ , , [i,j]] = uv; //to retrieve an element from array within an array we have to leave spaces for unwanted elements and to create an array within array and then declare the variable
 console.log(i,j);
+
+// default values
+let [p,q,r] = [8,9];
+console.log(p,q,r); //this r variable will be undefined because we didn't gave any value to this
+[p,q,r=1] = [8,9];//we can give default value to the array destructure by this way
+console.log(p,q,r);
