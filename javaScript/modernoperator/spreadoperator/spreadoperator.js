@@ -17,10 +17,25 @@ console.log(lastArr);
 // const lastArr=[arr,arr1,arr2] //🔴this will create an array within an arra
 
 
-// to pass these in arguments
+// to pass these to functions as arguments
 function orderFood(first,second,third){
     console.log(first,second,third);
 }
 const food =["Chaap","Rumali roti","Biryani"];
 orderFood(food[0],food[1],food[2]);
 orderFood(...food);//this is best way to pass something separated by commas
+
+// object
+
+const restaurant ={
+    restoName:"Kake di Hatti",
+    Menu:["DalMakhni","ShahiPaneer","ButterChicken"],
+    location:"Khatte ke kone wali basti"
+}
+//this way we can copy an object and put various other properties
+const restro1={slogan:"Jai Shree Ram", ...restaurant, contactNo: 1234000};
+console.log(restro1);
+// if we change the value of any one of them and otherone will remain unchanged
+restaurant.email="kdh@gmail.com";
+console.log(restaurant);
+console.log(restro1);
