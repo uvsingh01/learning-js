@@ -31,6 +31,8 @@ console.log(guest1);
 const guest2= restro.guest || 10;//this is the better way to check 
 console.log(guest2);
 
+// concusion:- or operator will return the first truthy value and if all of them are false then return last falsy value
+
 // ⭕AND
 console.log(0&&"Yuvi"); //this will return falsy value 
 // in this case the and operator will find truthy if it found falsy then return the earliest falsy
@@ -39,4 +41,4 @@ console.log(7&&"yuvi");//this will return yuvi
 console.log("hello"&&23&&null&&"yuvi");//will return null
 // as soon as it finds falsy value it will return it
 
-// conclusion:- in and operator it will look for truthy if it finds all truthy then it will return last truthy and if it finds falsy then it will return the first falsy
+// conclusion:- and operator will return first falsy and if all others are truthy then return last truthy value 

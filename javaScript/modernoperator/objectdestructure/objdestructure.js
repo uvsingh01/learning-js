@@ -6,7 +6,7 @@ const obj={
         console.log("true");
     }
 };
-
+// it is an es6 feature 
 
 // unlike array we have to write exact name in the curly braces to retrieve the elements of objects.
 // when we have to retrieve any element we do hot have to give spaces in between like arrays we only have to give exact name of the property without any specific order.

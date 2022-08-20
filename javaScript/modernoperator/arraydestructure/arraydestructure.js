@@ -1,5 +1,5 @@
 // Array destructure
-
+// it is an es6 feature
 // its very useful to return two value from same fn
 // very useful when getting data from api
 
