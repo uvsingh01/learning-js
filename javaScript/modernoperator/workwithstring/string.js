@@ -95,7 +95,23 @@ const capitalizeName = function(name){
 
 capitalizeName("yuvraj nitin raju ravi")
 
+// padding - to hide something out or to give pattern
 
+console.log("Yuvraj".padStart(10,"+"));
+console.log(("Yuvraj".padEnd(10,"+")));
+
+// credit card numbers hiding
+
+const maskCreditCard = function (number) {
+    const str = number+""; //to convert a number to string
+    const last = str.slice(-4);///to get the last 4 digits
+    return last.padStart(str.length, "*");
+}
+console.log(maskCreditCard(6886664826478));
+
+// repeat - to repeat something
+const message = "bad wether... all departures delayed";
+console.log(message.repeat(5));
 
 // var a;
 // console.log(a);
