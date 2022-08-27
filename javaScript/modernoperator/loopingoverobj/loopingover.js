@@ -42,3 +42,4 @@ console.log(entire);
 for(const ent of Object.entries(restaurant)){
     console.log(ent);
 }
+
