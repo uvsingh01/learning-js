@@ -11,7 +11,7 @@ console.log(arr.slice()); //we can create a shallow copy of arr using slice
 
 // ⭕ splice method- its same as slice but instead of giving new array it affects the original array
 const brr =[1,2,3,4,5];
-console.log(brr.splice(2));//the piece which was taken out by this method will not be available in this brr array again
+console.log(brr.splice(2,2));//the piece which was taken out by this method will not be available in this brr array again and  the format of deletion (startingg index, no. of deletion)
 console.log(brr);//remaining of above method
 
 // ⭕ reverse method - this is used to reverse the order of element present in array and it affects the original array
