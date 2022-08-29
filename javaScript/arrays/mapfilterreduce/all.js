@@ -135,3 +135,18 @@ console.log(bal1);
 
 // sort an array of integer
 
+money.sort((curval,nextval)=>{ //ascending order
+        if(curval>nextval)
+        return 1;
+        if(curval<nextval)
+        return -1;
+})
+console.log(money);
+
+money.sort((curval,nextval)=>{ //descending order
+        if(curval>nextval)
+        return -1;
+        if(curval<nextval)
+        return 1;
+})
+console.log(money);

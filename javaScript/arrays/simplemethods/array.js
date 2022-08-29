@@ -27,3 +27,22 @@ console.log([...arr, ...brr]);//we can do this too
 // ⭕ join method - this method is used to convert element of array into strings
 console.log(arr.join("+"));
 console.log(brr.join());// if we do not give any paramter in join method it will copy comma from array
+
+
+// ways to create a array
+const array = new Array(1,2,4);
+console.log(array);
+// if we give only one parameter to new array then it will create the empty array of that parameter
+const array1 = new Array(7);//it wil create an empty array of 7 
+console.log(array1);
+
+// the way to fill the array
+array1.fill(2,3,5)// array.fill(value, start idx, end idx);
+console.log(array1);
+array1.fill(1);//it will fill entire array of with 1 value
+console.log(array1);
+
+// array from to ccreate an array
+
+const y = Array.from({length:5}, (_,i)=>i+1);
+console.log(y);
