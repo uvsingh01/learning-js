@@ -56,3 +56,6 @@ document.querySelectorAll('.message').forEach(item => {
     ele.remove();
   })
 })
+
+// 🔻to style
+ele.style.color="red";
