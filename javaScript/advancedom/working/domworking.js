@@ -43,7 +43,8 @@ b.append(ele);
 // its like one person can go somewhere one place at a time
 
 // if we want to add same element multiple time then we can clone it 
-b.prepend(ele.cloneNode(true)) //if we pass true in clonenode then it will copy all the child elements inside it
+// let ele1 =ele.cloneNode(true)
+b.append(ele.cloneNode(true)) //if we pass true in clonenode then it will copy all the child elements inside it
 
 // 🔻to delete
 // document.querySelector(".message").addEventListener("click",function(e){
@@ -52,10 +53,48 @@ b.prepend(ele.cloneNode(true)) //if we pass true in clonenode then it will copy 
 // })
 
 document.querySelectorAll('.message').forEach(item => {
-  item.addEventListener('click', event => {
-    ele.remove();
+  item.addEventListener('click', () => {
+    item.remove();
   })
 })
 
-// 🔻to style
-ele.style.color="red";
+// 🔻to set style
+let redd = document.querySelectorAll(".message");//this will always return an array of selected class or id and we have to iterate over it to apply something on it
+redd.forEach((item)=>item.style.color="red");
+
+// we cannot log any style which is present in the css file
+console.log(ele.style.backgroundColor);
+
+// to get some style from css we can use getComputedStyle
+console.log(getComputedStyle(ele).backgroundColor);
+console.log(getComputedStyle(ele).padding);
+
+// to set property
+ele.style.setProperty("background-color","blue");
+ele.style.setProperty("border","2px solid red");
+
+// 🔻to attribute
+
+// to get the value of attributes
+const ima = document.querySelector("img");
+console.log(ima.alt);
+
+// to set the value of attributes
+ima.alt = "oh it's not found";
+console.log(ima.alt);
+
+// non standard attributes
+console.log(ima.designer);//undefined
+console.log(ima.getAttribute("designer"));
+
+ima.setAttribute("company","ape");
+console.log(ima.src);//this will show the full link
+console.log(ima.getAttribute("src"))//this will show only relative link
+
+// classes
+ima.classList.add("u","v");
+ima.classList.toggle("uv");
+ima.classList.remove("uv");
+console.log(ima.classList.contains("u"));//true
+
+
