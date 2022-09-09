@@ -29,6 +29,15 @@
 // polymorphism
 // a child can overwrite a method it inherited from a paret class
 
+// prototype
+// objects are linked to a protype
+// its an object which contains all the methods and properties linked to an object
+
+// prototypal inheritance
+// the prototype contains all the methods and properties that are accessible by to all the objects linked to that protoype
+
+// three ways to implement the prototypal inheritance
+// 
 
 
 const person = function(fname,lname){
@@ -36,12 +45,12 @@ const person = function(fname,lname){
     this.lastname=lname;
     console.log(this);
 }
-const yuvraj = new person('Yuvraj','Singh');
+const yuvraj = new person('Yuvraj','Singh');//its an instance that getting methods and properties from a class
 console.log(yuvraj);
 
 person.prototype.display=function(){
     console.log(this.firstname, this.lastname);
 }
 yuvraj.display();
-
+ 
 console.log(person.__proto__);
