@@ -32,25 +32,56 @@
 // prototype
 // objects are linked to a protype
 // its an object which contains all the methods and properties linked to an object
+// each and every fuctions are linked to property that is protoype
 
 // prototypal inheritance
 // the prototype contains all the methods and properties that are accessible by to all the objects linked to that protoype
 
-// three ways to implement the prototypal inheritance
-// 
+// note: fuction.protoype is acessible
+// object.__proto__ is accessible
 
 
+// constructors 
+// these are not any feature it is just an pattern to implement oops in javascript
 const person = function(fname,lname){
+    // instance properties
     this.firstname=fname;
     this.lastname=lname;
-    console.log(this);
+    // never do this ⚠️
+    // this.display = function(){
+    //     console.log(this.firstname, this.lastname);
+    // }
 }
-const yuvraj = new person('Yuvraj','Singh');//its an instance that getting methods and properties from a class
-console.log(yuvraj);
 
+const yuvraj = new person('Yuvraj','Singh');//its an instance that getting methods and properties from a class
+const raunak = new person("Raunak","Sharma");
+
+// 1. new {} is created
+// 2. funnction is called, this={}
+// 3. {} linked to protoype
+// 4. function automatically return{}
+console.log(yuvraj);
+console.log(yuvraj instanceof person);
+
+
+// to add something as a prototype to a constructor
+// this way is best for making the efficient code
+// this way we can assign a protoype to a object in 
+// constructor that way it can be inherited to the instance of classes
 person.prototype.display=function(){
     console.log(this.firstname, this.lastname);
 }
 yuvraj.display();
- 
-console.log(person.__proto__);
+// console.log(Object.getPrototypeOf(yuvraj));
+// console.log(yuvraj.__proto__);
+console.log(yuvraj.__proto__ === person.prototype);
+
+// to know which one is the prototype of which one
+console.log(person.prototype.isPrototypeOf(yuvraj));
+console.log(person.prototype.isPrototypeOf(person));//it is false because prototype is not a protoype  of constructor function it wil only available to the instance of the constructor
+
+// to know if it has its own property or not
+console.log(yuvraj.hasOwnProperty("firstname"));
+console.log(yuvraj.hasOwnProperty("display"));//this was inherited from the constructor
+
+// 
