@@ -41,7 +41,7 @@
 // object.__proto__ is accessible
 
 
-// constructors 
+// 🔴constructors :- first way of creating classes
 // these are not any feature it is just an pattern to implement oops in javascript
 const person = function(fname,lname){
     // instance properties
@@ -84,4 +84,38 @@ console.log(person.prototype.isPrototypeOf(person));//it is false because protot
 console.log(yuvraj.hasOwnProperty("firstname"));
 console.log(yuvraj.hasOwnProperty("display"));//this was inherited from the constructor
 
-// 
+// 🔴ES6 classes :- second way of creating classes
+
+class personNew {
+    // constructor(firstname,lastname){
+    //     this.fname = firstname;
+    //     this.lname = lastname;
+    // }
+    constructor(firstname,lastname,year){
+        this.fname = firstname;
+        this.lname = lastname;
+        this.year = year
+    }
+    // the code below will create prototype in personNew class
+    display(){
+        console.log(this.fname, this.lname);
+    }
+}
+
+// we can also use this way to create protoype
+personNew.prototype.calcAge = function(){
+    console.log(2022-this.year);
+}
+
+const raj = new personNew("Raj","Gupta",2000);
+raj.display();
+raj.calcAge();
+
+// using classes are usually fine but its not recommended because js developers will eventually add feature that are named similar to the name of the developers methods this will result in code breakdown
+
+// 1)classes are not hoisted
+// 2)classes are first-class citizens
+// 3)classes are executed in strict mode
+
+
+
