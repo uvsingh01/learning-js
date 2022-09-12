@@ -100,6 +100,9 @@ class personNew {
     display(){
         console.log(this.fname, this.lname);
     }
+    static greet(){
+        console.log("hi");
+    }
 }
 
 // we can also use this way to create protoype
@@ -117,5 +120,62 @@ raj.calcAge();
 // 2)classes are first-class citizens
 // 3)classes are executed in strict mode
 
+// 🔺Getters and setters
+// every objects can have getter and setter properties 
+// these properties are known as accessor properties
+// classes can also have setter and getter
+
+const obj= {
+    fullName:"Yuvraj Singh",
+    friends:["Raj","Raunak","Paras"],
+
+    get latest(){
+        return this.friends.slice(-1);
+    },
+    set latest(mov){
+        this.friends.push(mov);
+    }
+}
+console.log(obj.latest);// we should call these as properties not as methods
+obj.latest = "Anki";//when we use set we onnly have to declare value like when we have to put a new key value pair in obj
+console.log(obj.friends);
+
+class peeps {
+    constructor(fname,lname){
+        this.firstName = fname
+        this.lastName = lname
+    }
+
+    get first(){
+        return this.firstName;
+    }
+    set firstName(mov){//setter should have exactly one parameter
+        this._firstName=mov;
+    }
+    get firstName(){
+        return this._firstName;
+    }
+}
+
+const Raj = new peeps("Raj","Gupta");
+Raj.firstName="Raju";
+console.log(Raj.first);
+
+// 🔺static methods
+// these are the methods which are linked only to constructor function and the class 
+
+// function constructor
+
+person.greet = function(){
+    console.log("hi");
+}
+person.greet();
+// yuvraj.greet(); //this will throw error because function greet is only bound to constructor its not in its prototype
+
+// classes
+
+// if we put static in from of the methods of classes then only it will be bound to the class
+personNew.greet();
+// raj.greet(); //this will show error beacuse greet only bound to class only
 
 
