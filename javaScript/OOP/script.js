@@ -178,4 +178,87 @@ person.greet();
 personNew.greet();
 // raj.greet(); //this will show error beacuse greet only bound to class only
 
+// 🔴object.create
+// this is way to create custom protoypal inheritance between objects
 
+const personProto ={
+    calcAge(){
+        console.log(2022-this.birthYear);
+    },
+    init(firstName, birthYear){//the way to put props inside the existing empty object created by object.create method
+        this.firstName = firstName;
+        this.birthYear = birthYear;
+    }
+}
+
+const shyam =  Object.create(personProto);
+shyam.init("Shyam","1999");
+shyam.calcAge();
+
+// 🔴inheritance between constuctor classes
+
+
+const people = function(firstName, lastName){
+    this.firstName = firstName
+    this.lastName = lastName
+}
+
+people.prototype.display= function(){
+    console.log(this.firstName,this.lastName);
+}
+
+const student = function(firstName, lastName,course){
+    people.call(this,firstName,lastName);//here we used people class so that we donot have to repeat our code an din this way we can inherit porperties of diiferent classes
+    this.course = course;
+}
+
+// now we have to inherit protoypes of person in the student class then we can do this
+student.prototype = Object.create(people.prototype);
+
+student.prototype.introduce = function(){
+    console.log(`hey there!! my name is ${this.firstName} ${this.lastName} `);
+}
+
+const puru = new student("Paras","Rajput","CA");
+puru.display();
+puru.introduce();
+
+// when we log Student.protoype.constructor then this will return the people constructor but its not correct if we need the correct address of the constructor
+// then we can do this
+student.prototype.constructor = student;
+// console.log(student.protoype.constructor);//this wiil point towards student constructor
+
+console.log(puru instanceof student);
+console.log(puru instanceof people);
+console.log(puru instanceof Object);
+// all of these will be true because its also in its prototype chain
+
+
+// 🔴inheritance between ES6 classes
+
+const peopleProto ={
+    calcAge(){
+        console.log(2022-this.birthYear);
+    },
+    init(firstName, birthYear){//the way to put props inside the existing empty object created by object.create method
+        this.firstName = firstName;
+        this.birthYear = birthYear;
+    }
+}
+// here we created the prototype chain
+const students = Object.create(peopleProto);
+// console.log(students);
+ 
+students.init = function(firstName,birthYear,course){
+    peopleProto.init.call(this, firstName, birthYear);
+    this.course = course;
+}
+
+students.introduce = function(){
+    console.log(this.firstName);
+}
+
+const child = Object.create(students);
+child.init("yuvi singh",2001,"CS");
+child.introduce();
+child.calcAge();
